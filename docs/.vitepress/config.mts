@@ -69,7 +69,7 @@ export default defineConfig({
     // 顶部按钮配置
     nav: [
       { text: "指南", link: "/" },
-      { text: "配置", link: "/markdown-examples" },
+      { text: "同款机器人", link: "/" },
       {
         text: "链接",
         // 内部配置items则该按钮是下拉，link则是跳转链接
@@ -94,7 +94,7 @@ export default defineConfig({
       {
         text: "机器人操作指南",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "使用教程", link: "/tgbcwbot-tutorial" },
           { text: "Runtime API Examples", link: "/api-examples" },
         ],
       },

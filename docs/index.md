@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /api-examples
+      link: /tgbcwbot-tutorial
     - theme: alt
       text: 机器人指南
       target: _blank
