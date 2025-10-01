@@ -2,8 +2,8 @@ import { useSSRContext, unref } from "vue";
 import { ssrRenderAttrs, ssrRenderStyle, ssrInterpolate } from "vue/server-renderer";
 import { u as useData } from "./Content.Bp73cuNu.js";
 import "@vueuse/core";
-const __pageData = JSON.parse('{"title":"Runtime API Examples","description":"","frontmatter":{"outline":"deep"},"headers":[],"relativePath":"api-examples.md","filePath":"api-examples.md"}');
-const __default__ = { name: "api-examples.md" };
+const __pageData = JSON.parse('{"title":"Runtime API Examples","description":"","frontmatter":{},"headers":[],"relativePath":"en/api-examples.md","filePath":"en/api-examples.md"}');
+const __default__ = { name: "en/api-examples.md" };
 const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
   __ssrInlineRender: true,
   setup(__props) {
@@ -31,7 +31,7 @@ const _sfc_main = /* @__PURE__ */ Object.assign(__default__, {
 const _sfc_setup = _sfc_main.setup;
 _sfc_main.setup = (props, ctx) => {
   const ssrContext = useSSRContext();
-  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("api-examples.md");
+  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add("en/api-examples.md");
   return _sfc_setup ? _sfc_setup(props, ctx) : void 0;
 };
 export {

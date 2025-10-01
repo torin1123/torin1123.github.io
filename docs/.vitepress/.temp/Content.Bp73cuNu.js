@@ -3,7 +3,7 @@ import { shallowRef, readonly, inject, computed, ref, watch, reactive, markRaw, 
 function deserializeFunctions(r) {
   return Array.isArray(r) ? r.map(deserializeFunctions) : typeof r == "object" && r !== null ? Object.keys(r).reduce((t, n) => (t[n] = deserializeFunctions(r[n]), t), {}) : typeof r == "string" && r.startsWith("_vp-fn_") ? new Function(`return ${r.slice(7)}`)() : r;
 }
-const siteData = deserializeFunctions(JSON.parse('{"lang":"en-US","dir":"ltr","title":"白菜网项目机器人","description":"SnowAdmin官方文档","base":"/","head":[],"router":{"prefetchLinks":true},"appearance":true,"themeConfig":{"logo":"/bot.svg","nav":[{"text":"指南","link":"/"},{"text":"配置","link":"/markdown-examples"},{"text":"链接","items":[{"text":"在线预览","link":"http://101.126.93.137/#/login"},{"text":"Gitee仓库","link":"https://gitee.com/wang_fan_w/SnowAdmin"},{"text":"GitHub仓库","link":"https://github.com/WANG-Fan0912/SnowAdmin"}]}],"sidebar":[{"text":"Examples","items":[{"text":"Markdown Examples","link":"/markdown-examples"},{"text":"Runtime API Examples","link":"/api-examples"}]},{"text":"Examples","items":[{"text":"Markdown Examples","link":"/markdown-examples"},{"text":"Runtime API Examples","link":"/api-examples"}]}],"socialLinks":[{"icon":"github","link":"https://github.com/vuejs/vitepress"}],"footer":{"message":"基于 MIT 许可发布","copyright":"版权所有 © 2024-2029 白菜网项目机器人"}},"locales":{},"scrollOffset":134,"cleanUrls":false,"additionalConfig":{}}'));
+const siteData = deserializeFunctions(JSON.parse('{"lang":"en-US","dir":"ltr","title":"白菜网项目机器人","description":"SnowAdmin官方文档","base":"/","head":[],"router":{"prefetchLinks":true},"appearance":true,"themeConfig":{"search":{"provider":"local"},"logo":"/bot.svg","nav":[{"text":"指南","link":"/"},{"text":"配置","link":"/markdown-examples"},{"text":"链接","items":[{"text":"在线预览","link":"http://101.126.93.137/#/login"},{"text":"Gitee仓库","link":"https://gitee.com/wang_fan_w/SnowAdmin"},{"text":"GitHub仓库","link":"https://github.com/WANG-Fan0912/SnowAdmin"}]}],"sidebar":[{"text":"Examples","items":[{"text":"Markdown Examples","link":"/markdown-examples"},{"text":"Runtime API Examples","link":"/api-examples"}]},{"text":"Examples","items":[{"text":"Markdown Examples","link":"/markdown-examples"},{"text":"Runtime API Examples","link":"/api-examples"}]}],"socialLinks":[{"icon":"github","link":"https://github.com/vuejs/vitepress"}],"footer":{"message":"","copyright":"版权所有 © 2024-2029 白菜网项目机器人"}},"locales":{"root":{"label":"简体中文","lang":"zh-CN","themeConfig":{"outlineTitle":"本页目录","lastUpdatedText":"最后更新","docFooter":{"prev":"上一页","next":"下一页"},"returnToTopLabel":"返回顶部","sidebarMenuLabel":"菜单","darkModeSwitchLabel":"深色模式","lightModeSwitchTitle":"切换到浅色模式","darkModeSwitchTitle":"切换到深色模式"}},"en":{"label":"English","lang":"en-US","title":"BPW Robot","description":"BPW Project Robot Documentation","themeConfig":{"nav":[{"text":"Guide","link":"/en/"},{"text":"Config","link":"/en/markdown-examples"}],"sidebar":[{"text":"Examples","items":[{"text":"Markdown Examples","link":"/en/markdown-examples"},{"text":"Runtime API Examples","link":"/en/api-examples"}]}]}}},"scrollOffset":134,"cleanUrls":false,"additionalConfig":{}}'));
 const __vite_import_meta_env__ = {};
 const EXTERNAL_URL_RE = /^(?:[a-z]+:|\/\/)/i;
 const APPEARANCE_KEY = "vitepress-theme-appearance";
@@ -120,6 +120,9 @@ function treatAsHtml(filename) {
   }
   const ext = filename.split(".").pop();
   return ext == null || !KNOWN_EXTENSIONS.has(ext.toLowerCase());
+}
+function escapeRegExp(str) {
+  return str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&").replace(/-/g, "\\x2d");
 }
 function resolveAdditionalConfig({ additionalConfig }, path) {
   if (additionalConfig === void 0)
@@ -509,6 +512,8 @@ export {
   getScrollOffset as g,
   createRouter as h,
   isExternal as i,
+  useRouter as j,
+  escapeRegExp as k,
   mergeHead as m,
   onContentUpdated as o,
   pathToFile as p,

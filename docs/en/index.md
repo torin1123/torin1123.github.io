@@ -30,5 +30,5 @@ features:
     details: Using pnpm, the structure is clear and elegant, easy to maintain. Code is highly standardized.
   - icon: 🎉
     title: Community Support
-    details: Join the group to discuss and answer various development questions. Group 1: Under construction.
+    details: Join the group to discuss and answer various development questions. Group 1 is under construction.
 ---

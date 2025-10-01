@@ -1,7 +1,7 @@
 import { ssrRenderAttrs, ssrRenderSlot, ssrInterpolate, ssrRenderAttr, ssrRenderList, ssrRenderComponent, ssrRenderVNode, ssrRenderClass, renderToString } from "vue/server-renderer";
-import { defineComponent, mergeProps, useSSRContext, computed, unref, onMounted, onUpdated, onUnmounted, ref, watch, watchEffect, watchPostEffect, shallowRef, shallowReadonly, resolveComponent, createVNode, resolveDynamicComponent, withCtx, renderSlot, createTextVNode, toDisplayString, inject, createBlock, createCommentVNode, openBlock, readonly, nextTick, Fragment, renderList, provide, toHandlers, withKeys, onBeforeUnmount, useSlots, h, createSSRApp } from "vue";
+import { defineComponent, mergeProps, useSSRContext, computed, unref, onMounted, onUpdated, onUnmounted, ref, watch, watchEffect, watchPostEffect, shallowRef, shallowReadonly, resolveComponent, createVNode, resolveDynamicComponent, withCtx, renderSlot, createTextVNode, toDisplayString, inject, createBlock, createCommentVNode, openBlock, readonly, nextTick, Fragment, renderList, defineAsyncComponent, provide, toHandlers, withKeys, onBeforeUnmount, useSlots, h, createSSRApp } from "vue";
 import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
-import { u as useData$1, i as isExternal, t as treatAsHtml, w as withBase, a as isActive, g as getScrollOffset, o as onContentUpdated, b as inBrowser, c as useRoute, E as EXTERNAL_URL_RE, d as createTitle, m as mergeHead, p as pathToFile, R as RouterSymbol, e as initData, f as dataSymbol, C as Content, s as siteDataRef, h as createRouter } from "./Content.BNosYsuv.js";
+import { u as useData$1, i as isExternal, t as treatAsHtml, w as withBase, a as isActive, g as getScrollOffset, o as onContentUpdated, b as inBrowser, c as useRoute, E as EXTERNAL_URL_RE, d as createTitle, m as mergeHead, p as pathToFile, R as RouterSymbol, e as initData, f as dataSymbol, C as Content, s as siteDataRef, h as createRouter } from "./Content.Bp73cuNu.js";
 import { useMediaQuery, useWindowSize, onKeyStroke, useWindowScroll, useScrollLock } from "@vueuse/core";
 const _sfc_main$14 = /* @__PURE__ */ defineComponent({
   __name: "VPBadge",
@@ -2663,7 +2663,7 @@ const _sfc_main$s = /* @__PURE__ */ defineComponent({
   __name: "VPNavBarSearch",
   __ssrInlineRender: true,
   setup(__props) {
-    const VPLocalSearchBox = () => null;
+    const VPLocalSearchBox = defineAsyncComponent(() => import("./VPLocalSearchBox.CqKG01KG.js"));
     const VPAlgoliaSearchBox = () => null;
     const { theme: theme2 } = useData();
     const loaded = ref(false);
@@ -2690,8 +2690,27 @@ const _sfc_main$s = /* @__PURE__ */ defineComponent({
         }
       }, 16);
     }
+    function isEditingContent(event) {
+      const element = event.target;
+      const tagName = element.tagName;
+      return element.isContentEditable || tagName === "INPUT" || tagName === "SELECT" || tagName === "TEXTAREA";
+    }
     const showSearch = ref(false);
-    const provider = "";
+    {
+      onKeyStroke("k", (event) => {
+        if (event.ctrlKey || event.metaKey) {
+          event.preventDefault();
+          showSearch.value = true;
+        }
+      });
+      onKeyStroke("/", (event) => {
+        if (!isEditingContent(event)) {
+          event.preventDefault();
+          showSearch.value = true;
+        }
+      });
+    }
+    const provider = "local";
     return (_ctx, _push, _parent, _attrs) => {
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "VPNavBarSearch" }, _attrs))}>`);
       if (unref(provider) === "local") {
@@ -4719,5 +4738,7 @@ async function render(path) {
   return ctx;
 }
 export {
-  render
+  createSearchTranslate as c,
+  render,
+  useData as u
 };
