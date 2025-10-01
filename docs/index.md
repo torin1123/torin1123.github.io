@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "BCW-BOT"
   text: "全网白菜网项目机器人"
-  tagline: 专注、免费、通知、福利、
+  tagline: 独家、专注、免费、通知、福利
   image:
     src: /bot.svg
     alt: SnowAdmin
