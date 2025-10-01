@@ -4,10 +4,10 @@ import { computedAsync, useSessionStorage, useLocalStorage, debouncedWatch, onKe
 import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
 import Mark from "mark.js/src/vanilla.js";
 import MiniSearch from "minisearch";
-import { f as dataSymbol, p as pathToFile, j as useRouter, b as inBrowser, k as escapeRegExp } from "./Content.Bp73cuNu.js";
+import { f as dataSymbol, p as pathToFile, j as useRouter, b as inBrowser, k as escapeRegExp } from "./Content.Cj-vFt5u.js";
 import { u as useData, c as createSearchTranslate } from "./app.js";
 import { _ as _export_sfc } from "./plugin-vue_export-helper.1tPrXgE0.js";
-const localSearchIndex = { "root": () => import("./@localSearchIndexroot.bYObIB24.js"), "en": () => import("./@localSearchIndexen.CC6AT2xH.js") };
+const localSearchIndex = { "root": () => import("./@localSearchIndexroot.bYObIB24.js"), "en": () => import("./@localSearchIndexen.BnyukN52.js") };
 class LRUCache {
   max;
   cache;

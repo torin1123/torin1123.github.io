@@ -6,7 +6,13 @@ export default defineConfig({
   description: "SnowAdmin官方文档",
   base: '/', // 使用根路径，因为是用户页面仓库
   sitemap: {
-    hostname: 'https://bcwbot.top'
+    hostname: 'https://bcwbot.top',
+    transformItems: (items) => {
+      return items.map((item) => ({
+        ...item,
+        lastmod: new Date().toISOString()
+      }))
+    }
   },
   head: [
     ['link', { rel: 'icon', href: '/bot.svg' }]
