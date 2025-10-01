@@ -4,6 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "白菜网项目机器人",
   description: "SnowAdmin官方文档",
+  base: '/', // 使用根路径，因为是用户页面仓库
   // 项目配置
   themeConfig: {
     logo: "/bot.svg", // 项目的logo
