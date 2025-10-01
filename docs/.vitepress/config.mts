@@ -5,6 +5,9 @@ export default defineConfig({
   title: "白菜网项目机器人",
   description: "SnowAdmin官方文档",
   base: '/', // 使用根路径，因为是用户页面仓库
+  sitemap: {
+    hostname: 'https://bcwbot.top'
+  },
   head: [
     ['link', { rel: 'icon', href: '/bot.svg' }]
   ],
@@ -83,14 +86,14 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "Examples",
+        text: "机器人操作指南",
         items: [
           { text: "Markdown Examples", link: "/markdown-examples" },
           { text: "Runtime API Examples", link: "/api-examples" },
         ],
       },
       {
-        text: "Examples",
+        text: "Tlegram电报相关",
         items: [
           { text: "Markdown Examples", link: "/markdown-examples" },
           { text: "Runtime API Examples", link: "/api-examples" },
@@ -99,7 +102,7 @@ export default defineConfig({
     ],
     // 顶部最右侧github图标
     socialLinks: [
-      { icon: "github", link: "https://github.com/vuejs/vitepress" },
+      { icon: "telegram", link: "" },
     ],
     // 项目首页的footer
     footer: {
