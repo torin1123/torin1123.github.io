@@ -95,14 +95,12 @@ export default defineConfig({
         text: "机器人操作指南",
         items: [
           { text: "使用教程", link: "/tgbcwbot-tutorial" },
-          { text: "Runtime API Examples", link: "/api-examples" },
         ],
       },
       {
-        text: "Tlegram电报相关",
+        text: "Telegram电报相关",
         items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
+          { text: "TG注册教程", link: "/markdown-examples" },
         ],
       },
     ],

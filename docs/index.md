@@ -12,11 +12,11 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /tgbcwbot-tutorial
+      link: https://t.me/My_BcwBot
     - theme: alt
       text: 机器人指南
       target: _blank
-      link: 你的链接
+      link: /tgbcwbot-tutorial
     - theme: alt
       text: Telegram群组
       target: _blank
