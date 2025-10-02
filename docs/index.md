@@ -20,7 +20,7 @@ hero:
     - theme: alt
       text: Telegram群组
       target: _blank
-      link: 你的链接
+      link: https://t.me/bcwbot_group
 
 features:
   - icon: 🔎

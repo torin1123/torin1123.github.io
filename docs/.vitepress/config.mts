@@ -92,9 +92,9 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "机器人操作指南",
+        text: "操作指南",
         items: [
-          { text: "使用教程", link: "/tgbcwbot-tutorial" },
+          { text: "功能与使用教程", link: "/tgbcwbot-tutorial" },
         ],
       },
       {
