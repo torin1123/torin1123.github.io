@@ -16,7 +16,7 @@ hero:
     - theme: alt
       text: 机器人指南
       target: _blank
-      link: /tgbcwbot-tutorial
+      link: /tgbcwbot-tutorial.html
     - theme: alt
       text: Telegram群组
       target: _blank
