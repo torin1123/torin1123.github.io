@@ -92,16 +92,17 @@ export default defineConfig({
 
     sidebar: [
       {
-        text: "操作指南",
+        text: "介绍",
         items: [
           { text: "功能与使用教程", link: "/tgbcwbot-tutorial" },
         ],
       },
       {
-        text: "Telegram电报相关",
+        text: "Telegram",
         items: [
           { text: "TG注册教程", link: "/tgregistration" },
-          { text: "TG设置教程", link: "/" },
+          { text: "TG设置教程", link: "/tgsettings" },
+          { text: "频道id获取教程", link: "/tgchannelid" },
         ],
       },
     ],

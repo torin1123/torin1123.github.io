@@ -1,5 +1,5 @@
 ---
-outline: deep
+title: Telegram新手注册教程
 ---
 
 # Telegram（纸飞机）是什么？
