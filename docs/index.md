@@ -11,7 +11,7 @@ hero:
     alt: SnowAdmin
   actions:
     - theme: brand
-      text: 开始使用
+      text: 开始使用(需翻墙)
       link: https://t.me/My_BcwBot
     - theme: alt
       text: 机器人指南
