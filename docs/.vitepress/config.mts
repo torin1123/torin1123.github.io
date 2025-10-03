@@ -68,23 +68,15 @@ export default defineConfig({
     logo: "/bot.svg", // 项目的logo
     // 顶部按钮配置
     nav: [
-      { text: "指南", link: "/" },
+      { text: "指南", link: "/tgbcwbot-tutorial.html" },
       { text: "同款机器人", link: "/" },
       {
         text: "链接",
         // 内部配置items则该按钮是下拉，link则是跳转链接
         items: [
           {
-            text: "在线预览",
-            link: "http://101.126.93.137/#/login",
-          },
-          {
-            text: "Gitee仓库",
-            link: "https://gitee.com/wang_fan_w/SnowAdmin",
-          },
-          {
-            text: "GitHub仓库",
-            link: "https://github.com/WANG-Fan0912/SnowAdmin",
+            text: "TG注册教程",
+            link: "/tgregistration.html",
           },
         ],
       },
