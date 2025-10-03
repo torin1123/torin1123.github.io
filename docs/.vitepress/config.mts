@@ -106,7 +106,7 @@ export default defineConfig({
         ],
       },
     ],
-    // 顶部最右侧github图标
+    // 顶部最右侧github图
     socialLinks: [
       { icon: "telegram", link: "" },
     ],
