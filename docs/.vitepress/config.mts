@@ -100,7 +100,7 @@ export default defineConfig({
       {
         text: "Telegram电报相关",
         items: [
-          { text: "TG注册教程", link: "/markdown-examples" },
+          { text: "TG注册教程", link: "/tgregistration" },
         ],
       },
     ],
