@@ -98,6 +98,13 @@ export default defineConfig({
         ],
       },
       {
+        text: "翻墙相关",
+        items: [
+          { text: "学会翻墙", link: "/tgregistration" },
+          { text: "安全翻墙手册", link: "/tgsettings" },
+        ],
+      },
+      {
         text: "Telegram",
         items: [
           { text: "TG注册教程", link: "/tgregistration" },
